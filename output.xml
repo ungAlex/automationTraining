@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.2 (Python 3.10.0 on win32)" generated="20220114 11:21:01.978" rpa="false" schemaversion="2">
+<suite id="s1" name="emagTest" source="c:\Users\ungu025\Desktop\demo_proj_robot\test_suites\tests\emagTest.robot">
+<test id="s1-t1" name="Accept Cookies">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>url=${url}</arg>
+<arg>browser=${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220114 11:21:02.227" level="INFO">Opening browser 'edge' to base url 'https://emag.ro'.</msg>
+<status status="PASS" starttime="20220114 11:21:02.227" endtime="20220114 11:21:05.556"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220114 11:21:07.562" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220114 11:21:05.557" endtime="20220114 11:21:07.562"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath:/html/body/div[8]/div/div[2]/button[1]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220114 11:21:07.563" level="INFO">Clicking button 'xpath:/html/body/div[8]/div/div[2]/button[1]'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220114 11:21:07.818" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220114 11:21:07.584" endtime="20220114 11:21:07.818"/>
+</kw>
+<msg timestamp="20220114 11:21:07.820" level="FAIL">Button with locator 'xpath:/html/body/div[8]/div/div[2]/button[1]' not found.</msg>
+<status status="FAIL" starttime="20220114 11:21:07.563" endtime="20220114 11:21:07.820"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20220114 11:21:07.821" endtime="20220114 11:21:07.821"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*span[text()='Gaming, Carti &amp; Birotica']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220114 11:21:07.822" endtime="20220114 11:21:07.822"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath:/html/body/div[3]/div[1]/div/div[1]/ul/li[6]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220114 11:21:07.822" endtime="20220114 11:21:07.822"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="emg-body-overlay"]/div[2]/div[2]/div/div[3]/aside/ul/li[2]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220114 11:21:07.823" endtime="20220114 11:21:07.823"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="emg-body-overlay"]/div[2]/div[2]/div/div[3]/aside/ul[2]/li[2]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220114 11:21:07.823" endtime="20220114 11:21:07.823"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="main-container"]/section[1]/div/div[3]/div[2]/div[2]/div[5]/div/div[2]/div[1]/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220114 11:21:07.823" endtime="20220114 11:21:07.824"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="main-container"]/section[1]/div/div[3]/div[2]/div[2]/div[5]/div/div[2]/div[1]/div/ul/li[2]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220114 11:21:07.824" endtime="20220114 11:21:07.824"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20220114 11:21:07.825" endtime="20220114 11:21:07.825"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="card_grid"]/div[1]/div/div/div[4]/div[2]/form/button/text()</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220114 11:21:07.825" endtime="20220114 11:21:07.825"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20220114 11:21:07.825" endtime="20220114 11:21:07.825"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath:/html/body/div[11]/div/div/div[2]/div/div[3]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220114 11:21:07.826" endtime="20220114 11:21:07.826"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>20</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20220114 11:21:07.826" endtime="20220114 11:21:07.826"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220114 11:21:07.826" endtime="20220114 11:21:09.991"/>
+</kw>
+<status status="FAIL" starttime="20220114 11:21:02.226" endtime="20220114 11:21:09.993">Button with locator 'xpath:/html/body/div[8]/div/div[2]/button[1]' not found.</status>
+</test>
+<status status="FAIL" starttime="20220114 11:21:01.979" endtime="20220114 11:21:09.998"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="emagTest">emagTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

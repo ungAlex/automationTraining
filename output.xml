@@ -1,108 +1,238 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.2 (Python 3.10.0 on win32)" generated="20220114 11:21:01.978" rpa="false" schemaversion="2">
-<suite id="s1" name="emagTest" source="c:\Users\ungu025\Desktop\demo_proj_robot\test_suites\tests\emagTest.robot">
-<test id="s1-t1" name="Accept Cookies">
+<robot generator="Robot 4.1.2 (Python 3.10.0 on win32)" generated="20220207 10:40:18.306" rpa="false" schemaversion="2">
+<suite id="s1" name="emagTest" source="c:\Users\ungu025\Desktop\Automation Repo\automationTraining\Tests\emagTest.robot">
+<test id="s1-t1" name="Buy from Emag">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>url=${url}</arg>
 <arg>browser=${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220114 11:21:02.227" level="INFO">Opening browser 'edge' to base url 'https://emag.ro'.</msg>
-<status status="PASS" starttime="20220114 11:21:02.227" endtime="20220114 11:21:05.556"/>
+<msg timestamp="20220207 10:40:18.563" level="INFO">Opening browser 'edge' to base url 'https://emag.ro'.</msg>
+<status status="PASS" starttime="20220207 10:40:18.562" endtime="20220207 10:40:21.240"/>
+</kw>
+<kw name="Accept cookies" library="EmagMainPage">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${AcceptCookies}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220207 10:40:21.241" endtime="20220207 10:40:21.599"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220114 11:21:07.562" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20220114 11:21:05.557" endtime="20220114 11:21:07.562"/>
+<msg timestamp="20220207 10:40:23.603" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220207 10:40:21.599" endtime="20220207 10:40:23.603"/>
 </kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>xpath:/html/body/div[8]/div/div[2]/button[1]</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220114 11:21:07.563" level="INFO">Clicking button 'xpath:/html/body/div[8]/div/div[2]/button[1]'.</msg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${AcceptCookies}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220207 10:40:23.603" level="INFO">Clicking element '//button[text()='Accept']'.</msg>
+<status status="PASS" starttime="20220207 10:40:23.603" endtime="20220207 10:40:23.670"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220207 10:40:25.670" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220207 10:40:23.670" endtime="20220207 10:40:25.670"/>
+</kw>
+<status status="PASS" starttime="20220207 10:40:21.240" endtime="20220207 10:40:25.670"/>
+</kw>
+<kw name="Navigate to gaming" library="EmagMainPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SelectProductOptions}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220207 10:40:25.672" level="INFO">Clicking element '//div[@class="megamenu-list-container"]//ul[@class="megamenu-list"]//span[text()="Gaming, Carti &amp; Birotica"]'.</msg>
+<status status="PASS" starttime="20220207 10:40:25.672" endtime="20220207 10:40:26.399"/>
+</kw>
+<status status="PASS" starttime="20220207 10:40:25.671" endtime="20220207 10:40:26.399"/>
+</kw>
+<kw name="Select playstation category" library="EmagMainPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SelectSubChategory}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220207 10:40:26.402" level="INFO">Clicking element '//*[@class="emg-menu-wrapper emg-box-sizing"]//a[text()="Playstation"]'.</msg>
+<status status="PASS" starttime="20220207 10:40:26.401" endtime="20220207 10:40:27.280"/>
+</kw>
+<status status="PASS" starttime="20220207 10:40:26.400" endtime="20220207 10:40:27.280"/>
+</kw>
+<kw name="Select console playstation" library="PlaystationPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SelectOffer}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220207 10:40:27.282" level="INFO">Clicking element '//ul[@class="emg-aside-links"]//a[text()="Console Playstation"]'.</msg>
+<status status="PASS" starttime="20220207 10:40:27.282" endtime="20220207 10:40:27.761"/>
+</kw>
+<status status="PASS" starttime="20220207 10:40:27.281" endtime="20220207 10:40:27.761"/>
+</kw>
+<kw name="Sort the results" library="PlaystationPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SortButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220207 10:40:27.762" level="INFO">Clicking element '//button[@class='btn btn-sm btn-alt sort-control-btn gtm_ejaugtrtnc']'.</msg>
+<status status="PASS" starttime="20220207 10:40:27.762" endtime="20220207 10:40:27.907"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SortOption}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220207 10:40:27.908" level="INFO">Clicking element '//*[text()="Cele mai noi"]'.</msg>
+<status status="PASS" starttime="20220207 10:40:27.907" endtime="20220207 10:40:27.973"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220207 10:40:29.979" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220207 10:40:27.973" endtime="20220207 10:40:29.979"/>
+</kw>
+<status status="PASS" starttime="20220207 10:40:27.761" endtime="20220207 10:40:29.980"/>
+</kw>
+<kw name="Select the first entry" library="PlaystationPage">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220207 10:40:30.983" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220207 10:40:29.983" endtime="20220207 10:40:30.983"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SelectFirstEntry}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220207 10:40:30.985" level="INFO">Clicking element '//*[@id="card_grid"]/div[1]'.</msg>
+<status status="PASS" starttime="20220207 10:40:30.984" endtime="20220207 10:40:31.662"/>
+</kw>
+<status status="PASS" starttime="20220207 10:40:29.981" endtime="20220207 10:40:31.662"/>
+</kw>
+<kw name="Add to chart" library="FirstEntryPage">
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${exists}</var>
+<arg>Page Should Contain Element</arg>
+<arg>//div[@class="product-cart-fav-buttons"]</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//div[@class="product-cart-fav-buttons"]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20220114 11:21:07.818" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20220114 11:21:07.584" endtime="20220114 11:21:07.818"/>
+<msg timestamp="20220207 10:40:32.046" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220207 10:40:31.772" endtime="20220207 10:40:32.046"/>
 </kw>
-<msg timestamp="20220114 11:21:07.820" level="FAIL">Button with locator 'xpath:/html/body/div[8]/div/div[2]/button[1]' not found.</msg>
-<status status="FAIL" starttime="20220114 11:21:07.563" endtime="20220114 11:21:07.820"/>
+<msg timestamp="20220207 10:40:32.048" level="FAIL">Page should have contained element '//div[@class="product-cart-fav-buttons"]' but did not.</msg>
+<status status="FAIL" starttime="20220207 10:40:31.664" endtime="20220207 10:40:32.048"/>
 </kw>
+<msg timestamp="20220207 10:40:32.048" level="INFO">${exists} = False</msg>
+<status status="PASS" starttime="20220207 10:40:31.663" endtime="20220207 10:40:32.048"/>
+</kw>
+<if>
+<branch type="IF" condition="'${exists}' == 'True'">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//div[@class="product-cart-fav-buttons"]//button[@type="submit"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220207 10:40:32.049" endtime="20220207 10:40:32.049"/>
+</kw>
+<status status="NOT RUN" starttime="20220207 10:40:32.048" endtime="20220207 10:40:32.049"/>
+</branch>
+<branch type="ELSE">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//div[@class="product-highlight product-page-actions js-product-page-actions"]//a[@href="#-other-offers-list"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220207 10:40:32.049" level="INFO">Clicking element '//div[@class="product-highlight product-page-actions js-product-page-actions"]//a[@href="#-other-offers-list"]'.</msg>
+<status status="PASS" starttime="20220207 10:40:32.049" endtime="20220207 10:40:32.123"/>
+</kw>
+<status status="PASS" starttime="20220207 10:40:32.049" endtime="20220207 10:40:32.123"/>
+</branch>
+<status status="PASS" starttime="20220207 10:40:32.048" endtime="20220207 10:40:32.124"/>
+</if>
 <kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
+<arg>3</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20220114 11:21:07.821" endtime="20220114 11:21:07.821"/>
+<msg timestamp="20220207 10:40:35.137" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220207 10:40:32.124" endtime="20220207 10:40:35.137"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>//*span[text()='Gaming, Carti &amp; Birotica']</arg>
+<arg>${AddToChartButton}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220114 11:21:07.822" endtime="20220114 11:21:07.822"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath:/html/body/div[3]/div[1]/div/div[1]/ul/li[6]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220114 11:21:07.822" endtime="20220114 11:21:07.822"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath://*[@id="emg-body-overlay"]/div[2]/div[2]/div/div[3]/aside/ul/li[2]/a</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220114 11:21:07.823" endtime="20220114 11:21:07.823"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath://*[@id="emg-body-overlay"]/div[2]/div[2]/div/div[3]/aside/ul[2]/li[2]/a</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220114 11:21:07.823" endtime="20220114 11:21:07.823"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath://*[@id="main-container"]/section[1]/div/div[3]/div[2]/div[2]/div[5]/div/div[2]/div[1]/button</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220114 11:21:07.823" endtime="20220114 11:21:07.824"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath://*[@id="main-container"]/section[1]/div/div[3]/div[2]/div[2]/div[5]/div/div[2]/div[1]/div/ul/li[2]/a</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220114 11:21:07.824" endtime="20220114 11:21:07.824"/>
+<msg timestamp="20220207 10:40:35.140" level="INFO">Clicking element '//*[text()='Adauga in Cos']'.</msg>
+<status status="PASS" starttime="20220207 10:40:35.139" endtime="20220207 10:40:35.198"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>3</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20220114 11:21:07.825" endtime="20220114 11:21:07.825"/>
+<msg timestamp="20220207 10:40:38.205" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220207 10:40:35.198" endtime="20220207 10:40:38.205"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${ProdText}</var>
+<arg>//span[@class="small"]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220207 10:40:38.253" level="INFO">${ProdText} = Consola PlayStation 5 (B-Chasis) + Joc PS5 Marvel’s Spider-Man: Miles Morales + Joc PS5 Sackboy A Big Adventure! + Joc PS5 Ratchet &amp; Clank: Rift Apart + PSPlus 365 zile + PSCard 100 RON</msg>
+<status status="PASS" starttime="20220207 10:40:38.206" endtime="20220207 10:40:38.253"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${ProdText}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20220207 10:40:38.254" level="INFO">${ProdText} = Consola PlayStation 5 (B-Chasis) + Joc PS5 Marvel’s Spider-Man: Miles Morales + Joc PS5 Sackboy A Big Adventure! + Joc PS5 Ratchet &amp; Clank: Rift Apart + PSPlus 365 zile + PSCard 100 RON</msg>
+<status status="PASS" starttime="20220207 10:40:38.254" endtime="20220207 10:40:38.254"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath://*[@id="card_grid"]/div[1]/div/div/div[4]/div[2]/form/button/text()</arg>
+<arg>${ChartPopUp}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220114 11:21:07.825" endtime="20220114 11:21:07.825"/>
+<msg timestamp="20220207 10:40:38.254" level="INFO">Clicking element '//a[text()='Vezi detalii cos']'.</msg>
+<status status="PASS" starttime="20220207 10:40:38.254" endtime="20220207 10:40:38.947"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
-<arg>3</arg>
+<arg>1</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20220114 11:21:07.825" endtime="20220114 11:21:07.825"/>
+<msg timestamp="20220207 10:40:39.952" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220207 10:40:38.948" endtime="20220207 10:40:39.952"/>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath:/html/body/div[11]/div/div/div[2]/div/div[3]/a</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220114 11:21:07.826" endtime="20220114 11:21:07.826"/>
+<status status="PASS" starttime="20220207 10:40:31.663" endtime="20220207 10:40:39.953"/>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>20</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20220114 11:21:07.826" endtime="20220114 11:21:07.826"/>
+<kw name="Verify chart" library="FirstEntryPage">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${ProdTextValidation}</var>
+<arg>//div[@class="main-product-title-container emg-left"]//a[@class="line-item-title main-product-title"]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220207 10:40:39.997" level="INFO">${ProdTextValidation} = Consola PlayStation 5 (B-Chasis) + Joc PS5 Marvel’s Spider-Man: Miles Morales + Joc PS5 Sackboy A Big Adventure! + Joc PS5 Ratchet &amp; Clank: Rift Apart + PSPlus 365 zile + PSCard 100 RON</msg>
+<status status="PASS" starttime="20220207 10:40:39.955" endtime="20220207 10:40:39.997"/>
 </kw>
-<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220114 11:21:07.826" endtime="20220114 11:21:09.991"/>
+<if>
+<branch type="IF" condition="'${ProdTextValidation}' == '${ProdText}'">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Added to Chart</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220207 10:40:39.997" endtime="20220207 10:40:39.998"/>
 </kw>
-<status status="FAIL" starttime="20220114 11:21:02.226" endtime="20220114 11:21:09.993">Button with locator 'xpath:/html/body/div[8]/div/div[2]/button[1]' not found.</status>
+<status status="PASS" starttime="20220207 10:40:39.997" endtime="20220207 10:40:39.998"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Not Added to Chart</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220207 10:40:39.998" endtime="20220207 10:40:39.998"/>
+</kw>
+<status status="NOT RUN" starttime="20220207 10:40:39.998" endtime="20220207 10:40:39.998"/>
+</branch>
+<status status="PASS" starttime="20220207 10:40:39.997" endtime="20220207 10:40:39.998"/>
+</if>
+<status status="PASS" starttime="20220207 10:40:39.954" endtime="20220207 10:40:39.998"/>
+</kw>
+<kw name="Check product in chart" library="EmagMainPage">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${AddedToChart}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220207 10:40:40.011" level="INFO">Current page contains element '//span[text()='1']'.</msg>
+<status status="PASS" starttime="20220207 10:40:39.999" endtime="20220207 10:40:40.011"/>
+</kw>
+<status status="PASS" starttime="20220207 10:40:39.999" endtime="20220207 10:40:40.011"/>
+</kw>
+<status status="PASS" starttime="20220207 10:40:18.561" endtime="20220207 10:40:40.012"/>
 </test>
-<status status="FAIL" starttime="20220114 11:21:01.979" endtime="20220114 11:21:09.998"/>
+<status status="PASS" starttime="20220207 10:40:18.307" endtime="20220207 10:40:40.014"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="emagTest">emagTest</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="emagTest">emagTest</stat>
 </suite>
 </statistics>
 <errors>

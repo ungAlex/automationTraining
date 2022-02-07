@@ -12,11 +12,12 @@ ${browser}     edge
 
 Buy from Emag    
     Open Browser    url=${url}    browser=${browser}
+    #Set Browser Implicit Wait    3
     Accept cookies
     Navigate to gaming
     Select playstation category
     Select console playstation
-    Sort the latest
+    Sort the results
     Select the first entry
     Add to chart
     Verify chart
